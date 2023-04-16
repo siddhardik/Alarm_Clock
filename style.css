@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700&family=Rowdies:wght@300;400&display=swap');
+
+/* custom font */
+@font-face {
+    font-family: "digiFont";
+    src: url("./asset/digiFont.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ /* Set Value of Colour with properName  */
+:root {
+    /* --bg1: rgb(165, 0, 66); */
+    --fg1: #98003f;
+    --fg1Text: #fbf9de;
+    --shadow: rgb(90, 0, 36);
+    --alarmlist: #cb3250;
+
+    --fg2: #22346c;
+    --fg2Text: #dfdefb;
+    --shadow2: #14193d;
+
+}
+
+
+
+body {
+    background-image: url("./asset/img2.png");
+    background-size: cover;
+    font-family: 'Mukta', sans-serif;
+    transition: 1s;
+    background-attachment: fixed;
+    padding-bottom: 100px;
+
+}
+
+/* class to make div center */
+.center {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+/* div custom style => border, bgcolor,color */
+.borderStyle {
+    border: 1px solid var(--fg1Text);
+    border-radius: 5px;
+    text-align: center;
+    background-color: var(--fg1);
+    color: var(--fg1Text);
+}
+
+/* Hover effect class */
+.buttonHov:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+
+/* title or heading of alarm page */
+#title {
+    color: var(--fg1Text);
+    letter-spacing: 2px;
+
+    font-family: 'Rowdies', cursive;
+    font-weight: 300;
+    font-size: 20px;
+
+
+    box-sizing: border-box;
+    padding-top: 6px;
+    height: 40px;
+    width: 300px;
+    text-align: center;
+    border-radius: 5px;
+
+    /* set positon from top, center is handled by "center" class */
+    top: 100px;
+
+    background-color: var(--bg1);
+    /* x offset y | offset blur | itensity shadow | dimension*/
+    box-shadow: 0px 0px 10px 2px var(--shadow);
+
+}
+
+/* main container for current time and alarm set buttons---------- */
+.container {
+
+    box-sizing: border-box;
+    padding: 10px;
+    height: 235px;
+    width: 300px;
+    text-align: center;
+    border-radius: 5px;
+
+    /* set positon from top, center is handled by "center" class */
+    top: 150px;
+    box-shadow: 0px 5px 10px 2px var(--shadow);
+
+}
+
+/* switch mode button ------------------ */
+#theme {
+
+    width: 100px;
+    font-size: 10px;
+    font-weight: 500;
+
+    /* set positon from top, center is handled by "center" class */
+    top: 15px;
+
+}
+
+/* current time ----------- */
+#Curr-time {
+    font-family: digiFont;
+    color: var(--fg1Text);
+    font-size: 65px;
+
+    /* set positon from top, center is handled by "center" class */
+    top: 41px;
+
+}
+
+/* switch mode button hover effect ------------- */
+#theme:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/* container for alarm time---------- */
+.alarm-time-container {
+    top: 115px;
+}
+
+.alarm-time-container input {
+    width: 75px;
+    margin: 3px;
+    height: 25px;
+    text-align: center;
+}
+
+
+/* placeholder for alarm time */
+::placeholder {
+    color: var(--fg1Text);
+    opacity: 0.8;
+}
+
+/* set alarm button------------------- */
+#setAlarm {
+    height: 25px;
+    width: 250px;
+    top: 155px;
+    font-weight: 400;
+}
+
+/* stop alarm button --------------- */
+#stopAlarm {
+    height: 25px;
+    width: 250px;
+    top: 190px;
+    font-weight: 400;
+}
+
+
+/* container for alarm list */
+#allAlarmContainer {
+    margin-top: 450px;
+}
+
+/* single alarm container---------- */
+.alarmContainer {
+    box-sizing: border-box;
+    height: 35px;
+    width: 300px;
+    margin-top: 10px;
+    border-radius: 5px;
+
+    box-shadow: 0px 5px 10px 2px var(--shadow);
+    /* background-color: var(--alarmlist);
+    border: 1px solid var(--fg1Text); */
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    color: var(--fg1Text);
+    padding-left: 10px;
+    padding-right: 10px;
+
+
+}
+
+/* alarm time display--------- */
+.alarmContainer .alarmTime {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.alarmContainer .delete {
+    width: 20%;
+    background-color: var(--fg1);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+}
+
+.alarmContainer .delete p {
+    font-size: 12px;
+}
+
+
+/* alarm list heading  */
+#alarmList {
+    color: var(--fg1Text);
+    letter-spacing: 2px;
+
+    font-family: 'Rowdies', cursive;
+    font-weight: 300;
+    font-size: 20px;
+
+
+    box-sizing: border-box;
+    padding-top: 6px;
+    height: 40px;
+    width: 300px;
+    text-align: center;
+    border-radius: 5px;
+
+    /* set positon from top, center is handled by "center" class */
+    top: 400px;
+
+    background-color: var(--bg1);
+    /* x offset y | offset blur | itensity shadow | dimension*/
+    box-shadow: 0px 0px 10px 2px var(--shadow);
+
+}

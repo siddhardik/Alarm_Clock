@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm Clock</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- heading -->
+    <div class="center" id="title">24 Hours Alarm Clock</div>
+
+    <!-- Main container of current time, set alarm ---start here------------------->
+    <div class="container center">
+        <!-- switch theme -->
+        <div id="theme" class="center borderStyle">Switch Mode</div>
+        <!-- current time -->
+        <div class="center" id="Curr-time"></div>
+        <!-- alarm time container-->
+        <div class="alarm-time-container center">
+            <input id="alarm_hr" class="borderStyle buttonHov" type="number" name="alarm_hr" max="23" min="00"
+                placeholder="HH">
+            <input id="alarm_min" class="borderStyle buttonHov" type="number" name="alarm_min" max="59" min="00"
+                placeholder="MM">
+            <input id="alarm_sec" class="borderStyle buttonHov" type="number" name="alarm_sec" max="59" min="00"
+                placeholder="SS">
+        </div>
+        <!-- set alarm button -->
+        <div id="setAlarm" class="center borderStyle buttonHov">Set Alarm</div>
+        <div id="stopAlarm" class=" center borderStyle buttonHov">Stop Alarm</div>
+
+        <!-- alarm ring -->
+        <audio src="./asset/ToneHappy.mp3" id="music" loop="loop"></audio>
+    </div>
+    <!-- Main container of current time, set alarm ---end here------------------->
+
+    <div class="center" id="alarmList">List of Alarms</div>
+
+    <!-- container for alarm list -->
+    <div id="allAlarmContainer">
+
+    </div>
+
+    <!-- template for alarm list -->
+    <template id="templates">
+        <div class="alarmContainer">
+            <div class="alarmTime"></div>
+            <div class="delete buttonHov">
+                <p>Delete</p>
+            </div>
+        </div>
+    </template>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
